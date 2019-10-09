@@ -1,7 +1,8 @@
 
 public class MesoInherit extends MesoAbstract {
 
-	String stationID = null;
+	private String stationID = null;
+	private int average = -1;
 
 	public MesoInherit(MesoStation station) {
 		// TODO Auto-generated constructor stub
@@ -15,7 +16,6 @@ public class MesoInherit extends MesoAbstract {
 		int[] asciiAverage = new int[3];
 		int ceiling = -1;
 		int floor = 1000;
-		int average = -1;
 		double sumOfCharacters = 0;
 		double trueAverage;
 
@@ -47,7 +47,7 @@ public class MesoInherit extends MesoAbstract {
 	@Override
 	char letterAverage() {
 		// TODO Auto-generated method stub
-		return 0;
+		return (char) average;
 	}
 
 }
