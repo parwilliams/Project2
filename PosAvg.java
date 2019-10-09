@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class PosAvg {
 	
-	String index = null;
+	int index = 0;
 	String stationID = null;
 	
 	public PosAvg(String id){
@@ -13,7 +13,7 @@ public class PosAvg {
 		
 	}
 	
-	public String indexOfStation() throws IOException{
+	public int indexOfStation() throws IOException{
 		//TODO: Implement
 		FileInputStream fileByteStream = new FileInputStream("Mesonet.txt");
 		Scanner scnr = new Scanner(fileByteStream);
@@ -23,11 +23,11 @@ public class PosAvg {
 		}
 		
 		do {
+			++index;
 			String lineOfData = scnr.nextLine();
-			String indexCheck = lineOfData.substring(1, 4);
+			String indexCheck = lineOfData.substring(1, 5);
 			
 			if(indexCheck.contentEquals(stationID)) {
-				index = stationID;
 				exitWhile = true;
 			}
 		}
@@ -39,7 +39,7 @@ public class PosAvg {
 	@Override
 	public String toString() {
 		String str = null;
-		int indexInt = Integer.parseInt(index);
+		
 		
 		
 		return str;
