@@ -10,7 +10,7 @@ public class MesoInherit extends MesoAbstract {
 	}
 
 	@Override
-	int[] calAverage() {
+	public int[] calAverage() {
 		// TODO Auto-generated method stub
 		int[] asciiCharacters = new int[4];
 		int[] asciiAverage = new int[3];
@@ -45,9 +45,36 @@ public class MesoInherit extends MesoAbstract {
 	}
 
 	@Override
-	char letterAverage() {
+	public char letterAverage() {
 		// TODO Auto-generated method stub
-		return (char) average;
+		int[] asciiCharacters = new int[4];
+		int[] asciiAverage = new int[3];
+		int ceiling = -1;
+		int floor = 1000;
+		double sumOfCharacters = 0;
+		double trueAverage;
+		int averageReturn;
+		
+		for (int i = 0; i < 4; i++) { // Loop to put character values in array
+			asciiCharacters[i] = stationID.charAt(i);
+		}
+
+		for (int i = 0; i < 4; i++) { // Add All characters
+			sumOfCharacters += asciiCharacters[i];
+		}
+
+		trueAverage = sumOfCharacters / 4;
+
+		ceiling = (int) Math.ceil(trueAverage);
+		floor = (int) Math.floor(trueAverage);
+
+		if ((sumOfCharacters % 4) >= 2) {
+			averageReturn = ceiling;
+		} else
+			averageReturn = floor;
+		
+		
+		return (char) averageReturn;
 	}
 
 }
