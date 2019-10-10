@@ -44,7 +44,7 @@ public class MesoInherit extends MesoAbstract {
 		return asciiAverage;
 	}
 
-	@Override
+	@Override //Edited to work with Zybooks, was originally: return (char) average;
 	public char letterAverage() {
 		// TODO Auto-generated method stub
 		int[] asciiCharacters = new int[4];
