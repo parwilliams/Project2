@@ -9,11 +9,11 @@ public class Driver
 	public static void main(String[] args) throws IOException 
 	{
 		String stID = "OKCE";
-		MesoInherit mesoInherit = new MesoInherit(new MesoStation(stID));
+		MesoInherit mesoInherit = new MesoInherit(new MesoStation(stID));//Possibly Done
 		
-		PosAvg posAvg = new PosAvg(stID);
-		System.out.println("The Index of the city is: " + posAvg.indexOfStation());
-		System.out.println(posAvg);
+		PosAvg posAvg = new PosAvg(stID);//Done
+		System.out.println("The Index of the city is: " + posAvg.indexOfStation());//Done
+		System.out.println(posAvg);//Done
 		System.out.print("\n");
 		
 		System.out.println("Ascii Ceiling is " + mesoInherit.calAverage()[0]);
@@ -25,7 +25,7 @@ public class Driver
 		System.out.print("\n");
 		
 		LetterAvg letterAvg = new LetterAvg(mesoInherit.letterAverage());
-		System.out.println("Total number of stations starting with letter '" + mesoInherit.letterAverage() + "' is " + letterAvg.numberOfStationWithLetterAvg() + ".");
+		System.out.println("Total number of stations starting with letter '" + mesoInherit.letterAverage() + "' is " + letterAvg.numberOfStationWithLetterAvg() + ".\n");
 		
 		System.out.print(letterAvg);
 	}

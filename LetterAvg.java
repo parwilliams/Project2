@@ -36,10 +36,12 @@ public class LetterAvg {
 	
 	@Override
 	public String toString() {
+		int countingIndex = 0;
 		String str = "They are:\n";
-		for(int i = 0; i < matchingStations.size(); i++) {
-			str = str.concat(matchingStations.get(i) + "\n");
+		for(countingIndex = 0; countingIndex < matchingStations.size() - 1; countingIndex++) {
+			str = str.concat(matchingStations.get(countingIndex) + "\n");
 		}
+		str = str.concat(matchingStations.get(countingIndex));
 		return str;
 	}
 }
